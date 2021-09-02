@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+    <!-- Title -->
+    <title>Book Archive</title>
+  </head>
+  <body class="bg-light">
+    <!-- Main -->
+    <main>
+      <!-- Search Area -->
+      <section>
+        <div class="container px-3 px-sm-0 py-5">
+          <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+              <!-- Search Field -->
+              <div class="input-group">
+                <input
+                  id="search-field"
+                  type="text"
+                  class="form-control"
+                  placeholder="Search your favourite book"
+                />
+                <!-- Search Button -->
+                <button id="search-btn" class="input-group-text">Search</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /Search Area -->
+
+      <!-- Books Area -->
+      <section>
+        <div class="container px-3 px-sm-0">
+          <!-- Book Container -->
+          <div id="books-container" class="row g-4">
+            <div class="col-md-6 col-lg-4">
+              <div class="card">
+                <img src="..." class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title">Title</h5>
+                  <p class="card-text">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /Books Area -->
+    </main>
+    <!-- /Main -->
+
+    <!-- JS File -->
+    <script src="js/index.js"></script>
+  </body>
+</html>
