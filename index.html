@@ -17,25 +17,118 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+    <!-- Header -->
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light py-3">
+        <div class="container">
+          <!-- Logo -->
+          <a class="navbar-brand" href="index.html">
+            <img src="images/logo.png" alt="logo" class="img-fluid" />
+          </a>
+          <!-- Navbar Menu Button -->
+          <button
+            class="navbar-toggler shadow-none"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- Navbar Links -->
+          <div
+            class="collapse navbar-collapse px-2 px-sm-0"
+            id="navbarSupportedContent"
+          >
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="javascript:void(0)"
+                  >Home</a
+                >
+              </li>
+              <!-- Category Dropdown -->
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="javascript:void(0)"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Category
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li>
+                    <a class="dropdown-item" href="javascript:void(0)"
+                      >Action and Adventure</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="javascript:void(0)"
+                      >Programming</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="javascript:void(0)"
+                      >Historical Fiction
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="javascript:void(0)"
+                      >Fantasy
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="javascript:void(0)"
+                      >Detective and Mystery
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="javascript:void(0)"
+                      >Horror
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- /Header -->
+
     <!-- Main -->
     <main>
       <!-- Search Area -->
       <section>
-        <div class="container px-3 px-sm-0 py-4">
+        <div class="container px-3 px-sm-0 mt-5">
           <div class="row justify-content-center">
             <div class="col-md-8 col-lg-6">
               <!-- Search Field -->
-              <div class="input-group">
+              <div
+                class="
+                  input-group
+                  border border-2 border-dark
+                  rounded-3
+                  overflow-hidden
+                "
+              >
                 <input
                   id="search-field"
                   type="text"
-                  class="form-control shadow-none"
-                  placeholder="Search your favourite book"
+                  class="form-control shadow-none bg-light rounded-0"
+                  placeholder="Search by books (ex. Javascript The Definitive Guide)"
                 />
                 <!-- Search Button -->
                 <button
                   id="search-btn"
-                  class="btn btn-dark shadow-none input-group-text"
+                  class="btn btn-dark shadow-none input-group-text rounded-0"
                 >
                   Search
                 </button>
@@ -47,10 +140,10 @@
       <!-- /Search Area -->
 
       <!-- Books Area -->
-      <section>
+      <section class="pb-5">
         <div class="container px-3 px-sm-0">
           <!-- Founded Results Number -->
-          <div id="founded-results-number" class="text-center mb-4"></div>
+          <p id="founded-results-number" class="text-center my-5 lead"></p>
           <!-- Book Container -->
           <div id="books-container" class="row g-4"></div>
         </div>
@@ -60,6 +153,11 @@
     <!-- /Main -->
 
     <!-- JS File -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
     <script src="js/index.js"></script>
   </body>
 </html>

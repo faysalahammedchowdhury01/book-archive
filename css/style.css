@@ -1,6 +1,9 @@
-/* body background */
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
 body {
-  background-color: #f0f2f5;
+  background-color: #e4e4e4;
+  font-family: 'Poppins', sans-serif;
 }
 
 /* book image style */

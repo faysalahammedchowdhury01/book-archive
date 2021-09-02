@@ -7,7 +7,7 @@ const booksContainer = document.getElementById('books-container');
 // spinner html
 const spinner = `
 <div class="text-center">
-    <div class="spinner-border text-secondary" role="status">
+    <div class="spinner-border" role="status">
         <span class="visually-hidden">Loading...</span>
     </div>
 </div>
@@ -55,7 +55,7 @@ const displayBooks = ({ docs, numFound }) => {
 
     // set inner html of book div
     bookDiv.innerHTML = `
-    <div class="card h-100 border-0">
+    <div class="card h-100 border-0 rounded-3 overflow-hidden">
         ${
           cover_i
             ? `<img src="${imageUrl}" class="book-image  card-img-top" 
@@ -97,7 +97,7 @@ const handleSearch = () => {
 
   // if search filed is blank
   if (searchText.trim() === '') {
-    alert("Can't be empty!");
+    alert("Search field can't be empty!");
     return;
   }
   // hide founded results number
