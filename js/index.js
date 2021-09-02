@@ -1,6 +1,9 @@
 // Global Variables
-const resultFoundNumberEl = document.getElementById('result-found-number');
+const foundedResultsNumberEl = document.getElementById(
+  'founded-results-number'
+);
 const booksContainer = document.getElementById('books-container');
+
 // spinner html
 const spinner = `
 <div class="text-center">
@@ -15,20 +18,21 @@ const loadBooks = async (searchText) => {
   try {
     // display spinner
     booksContainer.innerHTML = spinner;
-    // fetch data and display
+    // fetch and display data
     const url = `https://openlibrary.org/search.json?q=${searchText}`;
     const res = await fetch(url);
     const data = await res.json();
     displayBooks(data);
   } catch (error) {
+    // alert error
     alert(error);
   }
 };
 
 // Display Books
 const displayBooks = ({ docs, numFound }) => {
-  // display result found number
-  resultFoundNumberEl.innerHTML = `
+  // display founded results number
+  foundedResultsNumberEl.innerHTML = `
   <strong>${numFound === 0 ? 'No' : numFound}</strong> Results Found!
   `;
 
@@ -38,9 +42,11 @@ const displayBooks = ({ docs, numFound }) => {
   // get 20 books
   const books = docs.slice(0, 20);
 
-  // display each book item
+  // display each book
   books.forEach((book) => {
     const { cover_i, title, author_name, publisher, first_publish_year } = book;
+
+    // generate image url
     const imageUrl = `https://covers.openlibrary.org/b/id/${cover_i}-M.jpg`;
 
     // create book div
@@ -94,8 +100,8 @@ const handleSearch = () => {
     alert("Can't be empty!");
     return;
   }
-  // hide result found number
-  resultFoundNumberEl.innerHTML = '';
+  // hide founded results number
+  foundedResultsNumberEl.innerHTML = '';
 
   // load books
   loadBooks(searchText);
