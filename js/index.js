@@ -67,24 +67,15 @@ const displayBooks = ({ docs, numFound }) => {
         }
         <div class="card-body">
             <h5 class="card-title"><strong>Title:</strong> ${title}</h5>
-            ${
-              author_name
-                ? `<p class="card-text mb-2"><strong>Author:</strong> 
-                    ${author_name[0]}</p>`
-                : ''
-            }
-            ${
-              publisher
-                ? `<p class="card-text mb-2"><strong>Publisher:</strong> 
-                    ${publisher[0]}</p>`
-                : ''
-            }
-            ${
-              first_publish_year
-                ? `<p class="card-text"><strong>First Publish Year:</strong> 
-                    ${first_publish_year}</p>`
-                : ''
-            }
+            <p class="card-text mb-2"><strong>Author:</strong> 
+                ${author_name ? author_name[0] : ''}
+            </p>
+            <p class="card-text mb-2"><strong>Publisher:</strong> 
+                ${publisher ? publisher[0] : ''}
+            </p>
+            <p class="card-text"><strong>First Publish Year:</strong> 
+                ${first_publish_year ? first_publish_year : ''}
+            </p>
         </div>
     </div>
     `;
