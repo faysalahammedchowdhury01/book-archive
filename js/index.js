@@ -16,8 +16,6 @@ const spinner = `
 // Load Books
 const loadBooks = async (searchText) => {
   try {
-    // display spinner
-    booksContainer.innerHTML = spinner;
     // fetch and display data
     const url = `https://openlibrary.org/search.json?q=${searchText}`;
     const res = await fetch(url);
@@ -38,6 +36,11 @@ const displayBooks = ({ docs, numFound }) => {
 
   // clear books container when new data loads
   booksContainer.innerHTML = '';
+
+  // return if founded results quantity is 0
+  if (numFound === 0) {
+    return;
+  }
 
   // get 20 books
   const books = docs.slice(0, 20);
@@ -101,7 +104,8 @@ const handleSearch = () => {
     return;
   }
 
-  // hide founded results quantity
+  // display spinner and hide founded results quantity
+  booksContainer.innerHTML = spinner;
   foundedResultsQuantityEl.innerHTML = '';
 
   // load books
