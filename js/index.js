@@ -1,6 +1,6 @@
 // Global Variables
-const foundedResultsNumberEl = document.getElementById(
-  'founded-results-number'
+const foundedResultsQuantityEl = document.getElementById(
+  'founded-results-quantity'
 );
 const booksContainer = document.getElementById('books-container');
 
@@ -31,8 +31,8 @@ const loadBooks = async (searchText) => {
 
 // Display Books
 const displayBooks = ({ docs, numFound }) => {
-  // display founded results number
-  foundedResultsNumberEl.innerHTML = `
+  // display founded results quantity
+  foundedResultsQuantityEl.innerHTML = `
   <strong>${numFound === 0 ? 'No' : numFound}</strong> Results Found!
   `;
 
@@ -100,8 +100,9 @@ const handleSearch = () => {
     alert("Search field can't be empty!");
     return;
   }
-  // hide founded results number
-  foundedResultsNumberEl.innerHTML = '';
+
+  // hide founded results quantity
+  foundedResultsQuantityEl.innerHTML = '';
 
   // load books
   loadBooks(searchText);
